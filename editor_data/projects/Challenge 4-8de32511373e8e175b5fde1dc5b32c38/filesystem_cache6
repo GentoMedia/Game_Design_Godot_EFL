@@ -1,0 +1,14 @@
+0ee627c74185e9d030d7f2151a4df6ab
+::res://::1664772341
+background_blue.png::StreamTexture::1644367949::1644367989::1::::<><>::
+Ball.gd::GDScript::1644382686::0::1::::<>KinematicBody2D<>::
+ball_red_small.png::StreamTexture::1644367961::1644367961::1::::<><>::
+block_small.png::StreamTexture::1644367953::1644367953::1::::<><>::
+Challenge4.gd::GDScript::1662533139::0::1::::<>Node2D<>::
+Challenge4.tscn::PackedScene::1663824421::0::1::::<><>::res://background_blue.png<>res://block_small.png<>res://ball_red_small.png<>res://hole_small_end_alt.png<>res://LabelFont.tres<>res://Logic.gd<>res://Ball.gd<>res://Hack-Regular.ttf<>res://Challenge4.gd
+default_env.tres::Environment::1663824421::0::1::::<><>::
+Hack-Regular.ttf::DynamicFontData::1644369074::0::1::::<><>::
+hole_small_end_alt.png::StreamTexture::1644367969::1644367969::1::::<><>::
+icon.png::StreamTexture::1644367658::1644367661::1::::<><>::
+LabelFont.tres::DynamicFont::1663824421::0::1::::<><>::res://Hack-Regular.ttf
+Logic.gd::GDScript::1644382745::0::1::::<>Control<>::

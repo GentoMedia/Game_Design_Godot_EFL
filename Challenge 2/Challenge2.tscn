@@ -1,0 +1,178 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Logic.gd" type="Script" id=1]
+[ext_resource path="res://Display_Font.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Input_Font.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Challenge2.gd" type="Script" id=4]
+
+[node name="Challenge2" type="Node2D"]
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Logic" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1024.0
+margin_bottom = 600.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Logic"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 31.0
+margin_top = 31.0
+margin_right = -33.0
+margin_bottom = -203.0
+custom_fonts/font = ExtResource( 2 )
+text = "Attach a new script 'Challenge2.gd' to Challenge2.
+Make 3 empty variables 'x', 'y', and 'z'.
+Make function 'get_most' to return the biggest number.
+Make a function 'get_least' to return the smallest number.
+(Hint: Use conditionals - 'if', 'else', 'elif')"
+autowrap = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Logic"]
+visible = false
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 32.0
+margin_top = -227.0
+margin_right = -32.0
+margin_bottom = -32.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="BoxNames" type="HBoxContainer" parent="Logic/VBoxContainer"]
+margin_right = 960.0
+margin_bottom = 71.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="xLabel" type="Label" parent="Logic/VBoxContainer/BoxNames"]
+margin_right = 317.0
+margin_bottom = 71.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 2 )
+text = "x"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="yLabel" type="Label" parent="Logic/VBoxContainer/BoxNames"]
+margin_left = 321.0
+margin_right = 638.0
+margin_bottom = 71.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 2 )
+text = "y"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="zLabel" type="Label" parent="Logic/VBoxContainer/BoxNames"]
+margin_left = 642.0
+margin_right = 960.0
+margin_bottom = 71.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 2 )
+text = "z"
+align = 1
+valign = 2
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="InputBoxes" type="HBoxContainer" parent="Logic/VBoxContainer"]
+margin_top = 75.0
+margin_right = 960.0
+margin_bottom = 147.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="xInput" type="LineEdit" parent="Logic/VBoxContainer/InputBoxes"]
+margin_right = 317.0
+margin_bottom = 72.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 3 )
+align = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="zInput" type="LineEdit" parent="Logic/VBoxContainer/InputBoxes"]
+margin_left = 321.0
+margin_right = 638.0
+margin_bottom = 72.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 3 )
+align = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="yInput" type="LineEdit" parent="Logic/VBoxContainer/InputBoxes"]
+margin_left = 642.0
+margin_right = 960.0
+margin_bottom = 72.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = ExtResource( 3 )
+align = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="Logic/VBoxContainer"]
+margin_top = 151.0
+margin_right = 960.0
+margin_bottom = 195.0
+custom_fonts/font = ExtResource( 2 )
+text = "Submit"
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[connection signal="pressed" from="Logic/VBoxContainer/Button" to="Logic" method="_on_Button_pressed"]

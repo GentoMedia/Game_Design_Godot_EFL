@@ -1,0 +1,15 @@
+0ee627c74185e9d030d7f2151a4df6ab
+::res://::1664781320
+Ball.gd::GDScript::1650011162::0::1::::<>KinematicBody2D<>::
+default_env.tres::Environment::1662959946::0::1::::<><>::
+icon.png::StreamTexture::1650512397::1650512401::1::::<><>::
+Level1.gd::GDScript::1650512887::0::1::::<>Node2D<>::
+Level1.tscn::PackedScene::1662959946::0::1::::<><>::res://Assets/background_blue.png<>res://Assets/block_small.png<>res://Assets/hole_small.png<>res://Assets/ball_red_small.png<>res://Assets/Hack-Regular.ttf<>res://Level1.gd<>res://Ball.gd<>res://UI.gd<>res://Assets/6036707320791040.wav
+UI.gd::GDScript::1650863047::0::1::::<>Control<>::
+::res://Assets/::1650862799
+6036707320791040.wav::AudioStreamSample::1650862629::1650862799::1::::<><>::
+background_blue.png::StreamTexture::1649998951::1650512489::1::::<><>::
+ball_red_small.png::StreamTexture::1649998945::1650512489::1::::<><>::
+block_small.png::StreamTexture::1649998957::1650512489::1::::<><>::
+Hack-Regular.ttf::DynamicFontData::1650001413::0::1::::<><>::
+hole_small.png::StreamTexture::1649998971::1650512489::1::::<><>::

@@ -1,0 +1,9 @@
+0ee627c74185e9d030d7f2151a4df6ab
+::res://::1655107132
+default_env.tres::Environment::1651303750::0::1::::<><>::
+icon.png::StreamTexture::1643347727::1643347731::1::::<><>::
+::res://Assets/::1643593435
+Hack-Regular.ttf::DynamicFontData::1643590898::0::1::::<><>::
+::res://ControlFiles/::1651303750
+Challenge1.tscn::PackedScene::1651303750::0::1::::<><>::res://ControlFiles/Logic.gd<>res://Assets/Hack-Regular.ttf
+Logic.gd::GDScript::1643600428::0::1::::<>VBoxContainer<>::

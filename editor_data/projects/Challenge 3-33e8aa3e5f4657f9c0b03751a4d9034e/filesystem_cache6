@@ -1,0 +1,14 @@
+0ee627c74185e9d030d7f2151a4df6ab
+::res://::1651300724
+background_blue.png::StreamTexture::1644284558::1644284790::1::::<><>::
+Ball.gd::GDScript::1644365857::0::1::::<>KinematicBody2D<>::
+ball_red_small.png::StreamTexture::1644284889::1644284889::1::::<><>::
+block_small.png::StreamTexture::1644283925::1644283925::1::::<><>::
+button_yellow.png::StreamTexture::1644286714::1644286714::1::::<><>::
+Challenge3.gd::GDScript::1644367541::0::1::::<>Node2D<>::
+Challenge3.tscn::PackedScene::1650012527::0::1::::<><>::res://block_small.png<>res://background_blue.png<>res://Challenge3.gd<>res://ball_red_small.png<>res://hole_small_end_alt.png<>res://button_yellow.png<>res://Hack-Regular.ttf<>res://Ball.gd<>res://VectorPop.gd
+default_env.tres::Environment::1650012527::0::1::::<><>::
+Hack-Regular.ttf::DynamicFontData::1644287850::0::1::::<><>::
+hole_small_end_alt.png::StreamTexture::1644286164::1644286164::1::::<><>::
+icon.png::StreamTexture::1644282572::1644282576::1::::<><>::
+VectorPop.gd::GDScript::1644365611::0::1::::<>Popup<>::

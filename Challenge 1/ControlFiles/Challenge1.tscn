@@ -1,0 +1,137 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://ControlFiles/Logic.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Hack-Regular.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 32
+use_filter = true
+extra_spacing_top = -4
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+use_filter = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+use_filter = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 32
+use_filter = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 32
+use_filter = true
+font_data = ExtResource( 4 )
+
+[node name="Challenge1" type="Node2D"]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Logic" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1024.0
+margin_bottom = 600.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Logic"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 16.0
+margin_top = 16.0
+margin_right = -16.0
+margin_bottom = -16.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="nameLabel" type="Label" parent="Logic/VBoxContainer"]
+margin_right = 992.0
+margin_bottom = 34.0
+custom_fonts/font = SubResource( 1 )
+text = "class_number_name = "
+autowrap = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Logic/VBoxContainer"]
+margin_top = 38.0
+margin_right = 992.0
+margin_bottom = 405.0
+custom_fonts/font = SubResource( 1 )
+text = "
+Attach a new script 'Challeng1.gd' to Challenge1.
+Make a variable 'class_number_name' equal to your
+    class, number, and name as a String.
+Make a variable 'x' equal to 5.
+Make a variable 'y' equal to 4.
+Make a variable 'z' equal to 7.
+Make a function 'add_numbers' to change z to x
+    plus y.
+	"
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="xLabel" type="Label" parent="Logic/VBoxContainer"]
+margin_top = 409.0
+margin_right = 992.0
+margin_bottom = 447.0
+custom_fonts/font = SubResource( 2 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="yLabel" type="Label" parent="Logic/VBoxContainer"]
+margin_top = 451.0
+margin_right = 992.0
+margin_bottom = 489.0
+custom_fonts/font = SubResource( 3 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="zLabel" type="Label" parent="Logic/VBoxContainer"]
+margin_top = 493.0
+margin_right = 992.0
+margin_bottom = 531.0
+custom_fonts/font = SubResource( 4 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="funcLabel" type="Label" parent="Logic/VBoxContainer"]
+margin_top = 535.0
+margin_right = 992.0
+margin_bottom = 573.0
+custom_fonts/font = SubResource( 5 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}

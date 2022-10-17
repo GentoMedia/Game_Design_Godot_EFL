@@ -1,0 +1,10 @@
+0ee627c74185e9d030d7f2151a4df6ab
+::res://::1649997221
+Challenge5.tscn::PackedScene::1649997179::0::1::::<><>::
+default_env.tres::Environment::1649997179::0::1::::<><>::
+icon.png::StreamTexture::1649996907::1649996910::1::::<><>::
+::res://Assets/::1649997133
+background_blue.png::StreamTexture::1649997108::1649997258::1::::<><>::
+ball_red_small.png::StreamTexture::1649997117::1649997117::1::::<><>::
+block_small.png::StreamTexture::1649997122::1649997122::1::::<><>::
+hole_small_end_alt.png::StreamTexture::1649997133::1649997133::1::::<><>::

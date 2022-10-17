@@ -1,0 +1,298 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Frame.gd" type="Script" id=1]
+[ext_resource path="res://BallStretch.gd" type="Script" id=2]
+[ext_resource path="res://hole_large_end_alt.png" type="Texture" id=3]
+[ext_resource path="res://GrowLine.png" type="Texture" id=4]
+[ext_resource path="res://ball_red_large.png" type="Texture" id=5]
+[ext_resource path="res://GrowDot.png" type="Texture" id=6]
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 57.9062
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 64.1249
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 6.0
+
+[node name="BallStretch" type="Node2D"]
+visible = false
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Hole" type="Area2D" parent="."]
+position = Vector2( 879, 489 )
+scale = Vector2( 0.8, 0.8 )
+collision_layer = 2
+collision_mask = 2
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Hole"]
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hole"]
+shape = SubResource( 3 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="HoleEdge" type="Area2D" parent="."]
+position = Vector2( 879, 489 )
+collision_layer = 2
+collision_mask = 2
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="HoleEdge"]
+scale = Vector2( 6, 6 )
+polygon = PoolVector2Array( -0.166656, -7.83333, 3.16667, -7.16666, 5.66667, -5.33333, 7.33334, -2.83333, 7.83334, -0.333328, 7.33334, 3.16667, 5.5, 5.5, 3.66667, 7, 0.666672, 7.83334, -3, 7.33334, -5.5, 5.5, -6.83333, 3.83334, -7.83333, 1, -7.83333, -1.16666, -7.16666, -3.16666, -6.16666, -4.83333, -3.66666, -7, -0.166656, -7.83333, -0.166656, -10.6667, -11.8333, -10.5, -11.1667, 11, 12, 10.8333, 10.8333, -11, -0.166656, -10.6667 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Ball" type="Area2D" parent="."]
+position = Vector2( 114, 99 )
+collision_layer = 2
+collision_mask = 2
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Ball"]
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Frame" type="Node2D" parent="."]
+position = Vector2( 114, 99 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="LeftLine" type="Sprite" parent="Frame"]
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="RightLine" type="Sprite" parent="Frame"]
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="TopLine" type="Sprite" parent="Frame"]
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="BottomLine" type="Sprite" parent="Frame"]
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="TopLeft" type="Area2D" parent="Frame"]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Frame/TopLeft"]
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame/TopLeft"]
+shape = SubResource( 4 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Top" type="Area2D" parent="Frame"]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Frame/Top"]
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame/Top"]
+shape = SubResource( 4 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="TopRight" type="Area2D" parent="Frame"]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Frame/TopRight"]
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame/TopRight"]
+shape = SubResource( 4 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Right" type="Area2D" parent="Frame"]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Frame/Right"]
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame/Right"]
+shape = SubResource( 4 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="BottomRight" type="Area2D" parent="Frame"]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Frame/BottomRight"]
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame/BottomRight"]
+shape = SubResource( 4 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Bottom" type="Area2D" parent="Frame"]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Frame/Bottom"]
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame/Bottom"]
+shape = SubResource( 4 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="BottomLeft" type="Area2D" parent="Frame"]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Frame/BottomLeft"]
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame/BottomLeft"]
+shape = SubResource( 4 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Left" type="Area2D" parent="Frame"]
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Frame/Left"]
+texture = ExtResource( 6 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Frame/Left"]
+shape = SubResource( 4 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[connection signal="area_entered" from="Hole" to="." method="_on_Hole_area_entered"]
+[connection signal="area_exited" from="Hole" to="." method="_on_Hole_area_exited"]
+[connection signal="area_entered" from="HoleEdge" to="." method="_on_HoleEdge_area_entered"]
+[connection signal="area_exited" from="HoleEdge" to="." method="_on_HoleEdge_area_exited"]
+[connection signal="input_event" from="Ball" to="." method="_on_Ball_input_event"]
+[connection signal="input_event" from="Frame/TopLeft" to="." method="_on_Dot_input_event"]
+[connection signal="input_event" from="Frame/Top" to="." method="_on_Dot_input_event"]
+[connection signal="input_event" from="Frame/TopRight" to="." method="_on_Dot_input_event"]
+[connection signal="input_event" from="Frame/Right" to="." method="_on_Dot_input_event"]
+[connection signal="input_event" from="Frame/BottomRight" to="." method="_on_Dot_input_event"]
+[connection signal="input_event" from="Frame/Bottom" to="." method="_on_Dot_input_event"]
+[connection signal="input_event" from="Frame/BottomLeft" to="." method="_on_Dot_input_event"]
+[connection signal="input_event" from="Frame/Left" to="." method="_on_Dot_input_event"]

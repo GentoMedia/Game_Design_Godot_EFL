@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Zooming.gd" type="Script" id=1]
+[ext_resource path="res://Hack-Regular.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=5]
+size = 128
+use_filter = true
+font_data = ExtResource( 2 )
+
+[node name="Zooming" type="Node2D"]
+visible = false
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1024.0
+margin_bottom = 600.0
+custom_fonts/font = SubResource( 5 )
+text = "Zoom in."
+align = 1
+valign = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 512, 300 )
+zoom = Vector2( 4, 4 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}

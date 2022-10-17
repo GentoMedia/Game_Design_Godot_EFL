@@ -1,0 +1,67 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://BallMove.gd" type="Script" id=1]
+[ext_resource path="res://hole_large_end_alt.png" type="Texture" id=2]
+[ext_resource path="res://ball_red_large.png" type="Texture" id=3]
+
+[sub_resource type="CircleShape2D" id=3]
+radius = 57.9062
+
+[sub_resource type="CircleShape2D" id=2]
+radius = 64.1249
+
+[node name="BallMove" type="Node2D"]
+visible = false
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Hole" type="Area2D" parent="."]
+position = Vector2( 784, 442 )
+scale = Vector2( 0.8, 0.8 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Hole"]
+texture = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hole"]
+shape = SubResource( 3 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Ball" type="Area2D" parent="."]
+position = Vector2( 184, 144 )
+scale = Vector2( 0.6, 0.6 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Ball"]
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
+shape = SubResource( 2 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[connection signal="mouse_entered" from="Hole" to="." method="_on_Hole_mouse_entered"]
+[connection signal="mouse_exited" from="Hole" to="." method="_on_Hole_mouse_exited"]
+[connection signal="input_event" from="Ball" to="." method="_on_Ball_input_event"]

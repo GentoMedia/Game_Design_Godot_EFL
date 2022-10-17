@@ -1,0 +1,10 @@
+0ee627c74185e9d030d7f2151a4df6ab
+::res://::1664773842
+default_env.tres::Environment::1664500094::0::1::::<><>::
+icon.png::StreamTexture::1649998688::1649998691::1::::<><>::
+Level1.tscn::PackedScene::1664500094::0::1::::<><>::res://Assets/background_blue.png<>res://Assets/block_small.png<>res://Assets/hole_small_end_alt.png<>res://Assets/ball_red_small.png
+::res://Assets/::1664499510
+background_blue.png::StreamTexture::1664499473::1664499510::1::::<><>::
+ball_red_small.png::StreamTexture::1664499476::1664499476::1::::<><>::
+block_small.png::StreamTexture::1664499479::1664499479::1::::<><>::
+hole_small_end_alt.png::StreamTexture::1664499481::1664499482::1::::<><>::

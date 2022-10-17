@@ -1,0 +1,9 @@
+Node2D
+Label
+CollisionShape2D
+Sprite
+Area2D
+Camera2D
+CollisionPolygon2D
+KinematicBody2D
+Control

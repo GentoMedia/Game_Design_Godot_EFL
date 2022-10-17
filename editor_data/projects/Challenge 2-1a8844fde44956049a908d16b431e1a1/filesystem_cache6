@@ -1,0 +1,10 @@
+0ee627c74185e9d030d7f2151a4df6ab
+::res://::1655357884
+Challenge2.gd::GDScript::1643957728::0::1::::<>Node2D<>::
+Challenge2.tscn::PackedScene::1650012411::0::1::::<><>::res://Logic.gd<>res://Display_Font.tres<>res://Input_Font.tres<>res://Challenge2.gd
+default_env.tres::Environment::1650012411::0::1::::<><>::
+Display_Font.tres::DynamicFont::1650012376::0::1::::<><>::res://Hack-Regular.ttf
+Hack-Regular.ttf::DynamicFontData::1643847020::0::1::::<><>::
+icon.png::StreamTexture::1643600524::1643600528::1::::<><>::
+Input_Font.tres::DynamicFont::1650012376::0::1::::<><>::res://Hack-Regular.ttf
+Logic.gd::GDScript::1644282250::0::1::::<>Control<>::

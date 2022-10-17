@@ -1,0 +1,7 @@
+Label
+Control
+CollisionShape2D
+Sprite
+KinematicBody2D
+Area2D
+TileMap

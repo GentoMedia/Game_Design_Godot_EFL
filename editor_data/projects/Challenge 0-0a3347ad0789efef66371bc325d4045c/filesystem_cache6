@@ -1,0 +1,16 @@
+0ee627c74185e9d030d7f2151a4df6ab
+::res://::1652401580
+BallMove.gd::GDScript::1643783256::0::1::::<>Node2D<>::
+BallStretch.gd::GDScript::1643769174::0::1::::<>Node2D<>::
+ball_red_large.png::StreamTexture::1643604687::1643604687::1::::<><>::
+Challenge0.gd::GDScript::1643783310::0::1::::<>Node2D<>::
+Challenge0.tscn::PackedScene::1652400622::0::1::::<><>::res://Hack-Regular.ttf<>res://Challenge0.gd<>res://ball_red_large.png<>res://hole_large_end_alt.png<>res://BallMove.gd<>res://BallStretch.gd<>res://GrowLine.png<>res://Frame.gd<>res://GrowDot.png<>res://Zooming.gd<>res://MoveViewport.gd
+default_env.tres::Environment::1652400622::0::1::::<><>::
+Frame.gd::GDScript::1643681561::0::1::::<>Node2D<>::
+GrowDot.png::StreamTexture::1643676943::1643676943::1::::<><>::
+GrowLine.png::StreamTexture::1643676943::1643676944::1::::<><>::
+Hack-Regular.ttf::DynamicFontData::1643603122::0::1::::<><>::
+hole_large_end_alt.png::StreamTexture::1643604691::1643604691::1::::<><>::
+icon.png::StreamTexture::1643603009::1643603012::1::::<><>::
+MoveViewport.gd::GDScript::1643782829::0::1::::<>Node2D<>::
+Zooming.gd::GDScript::1643783178::0::1::::<>Node2D<>::

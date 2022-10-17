@@ -1,0 +1,437 @@
+[gd_scene load_steps=30 format=2]
+
+[ext_resource path="res://block_small.png" type="Texture" id=1]
+[ext_resource path="res://background_blue.png" type="Texture" id=2]
+[ext_resource path="res://Challenge3.gd" type="Script" id=3]
+[ext_resource path="res://ball_red_small.png" type="Texture" id=4]
+[ext_resource path="res://hole_small_end_alt.png" type="Texture" id=5]
+[ext_resource path="res://button_yellow.png" type="Texture" id=6]
+[ext_resource path="res://Hack-Regular.ttf" type="DynamicFontData" id=7]
+[ext_resource path="res://Ball.gd" type="Script" id=8]
+[ext_resource path="res://VectorPop.gd" type="Script" id=9]
+
+[sub_resource type="ConvexPolygonShape2D" id=3]
+points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
+
+[sub_resource type="TileSet" id=2]
+0/name = "block_small.png 0"
+0/texture = ExtResource( 1 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 64, 64 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape = SubResource( 3 )
+0/shape_one_way = false
+0/shape_one_way_margin = 1.0
+0/shapes = [ {
+"autotile_coord": Vector2( 0, 0 ),
+"one_way": false,
+"one_way_margin": 1.0,
+"shape": SubResource( 3 ),
+"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
+} ]
+0/z_index = 0
+
+[sub_resource type="CircleShape2D" id=5]
+radius = 24.0208
+
+[sub_resource type="CircleShape2D" id=4]
+radius = 29.4279
+
+[sub_resource type="DynamicFont" id=6]
+size = 32
+outline_size = 1
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 32
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.568627, 1, 0, 0 )
+border_width_left = 4
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="StyleBoxFlat" id=11]
+bg_color = Color( 0.733333, 0.643137, 0, 0 )
+border_width_right = 4
+border_color = Color( 1, 1, 1, 1 )
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+
+[sub_resource type="DynamicFont" id=8]
+size = 32
+outline_size = 1
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=12]
+bg_color = Color( 0.670588, 0, 0.737255, 1 )
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.917647, 0.0313726, 1, 1 )
+
+[sub_resource type="DynamicFont" id=13]
+size = 32
+outline_size = 1
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxTexture" id=14]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 256, 106 )
+modulate_color = Color( 1, 0.882353, 0.882353, 1 )
+
+[sub_resource type="StyleBoxTexture" id=16]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 256, 106 )
+modulate_color = Color( 0.784314, 1, 0.890196, 1 )
+
+[sub_resource type="StyleBoxTexture" id=15]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 256, 106 )
+
+[sub_resource type="InputEventKey" id=20]
+scancode = 16777218
+
+[sub_resource type="ShortCut" id=21]
+shortcut = SubResource( 20 )
+
+[sub_resource type="DynamicFont" id=17]
+size = 160
+outline_size = 5
+font_data = ExtResource( 7 )
+
+[sub_resource type="StyleBoxFlat" id=18]
+bg_color = Color( 0.556863, 0.0980392, 0.588235, 0.560784 )
+
+[sub_resource type="StyleBoxFlat" id=19]
+bg_color = Color( 1, 0, 0, 0.560784 )
+
+[node name="Challenge3" type="Node2D"]
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Floor" type="Sprite" parent="."]
+position = Vector2( 512, 320 )
+texture = ExtResource( 2 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 1024, 640 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Walls" type="TileMap" parent="."]
+visible = false
+tile_set = SubResource( 2 )
+format = 1
+tile_data = PoolIntArray( 0, 0, 0, 1, 0, 0, 2, 0, 0, 3, 0, 0, 4, 0, 0, 5, 0, 0, 6, 0, 0, 7, 0, 0, 8, 0, 0, 9, 0, 0, 10, 0, 0, 11, 0, 0, 12, 0, 0, 13, 0, 0, 14, 0, 0, 15, 0, 0, 65536, 0, 0, 65543, 0, 0, 65551, 0, 0, 131072, 0, 0, 131079, 0, 0, 131081, 0, 0, 131082, 0, 0, 131083, 0, 0, 131084, 0, 0, 131085, 0, 0, 131087, 0, 0, 196608, 0, 0, 196609, 0, 0, 196611, 0, 0, 196612, 0, 0, 196615, 0, 0, 196619, 0, 0, 196623, 0, 0, 262144, 0, 0, 262148, 0, 0, 262151, 0, 0, 262152, 0, 0, 262153, 0, 0, 262155, 0, 0, 262159, 0, 0, 327680, 0, 0, 327684, 0, 0, 327687, 0, 0, 327691, 0, 0, 327695, 0, 0, 393216, 0, 0, 393220, 0, 0, 393223, 0, 0, 393225, 0, 0, 393226, 0, 0, 393227, 0, 0, 393228, 0, 0, 393229, 0, 0, 393230, 0, 0, 393231, 0, 0, 458752, 0, 0, 458756, 0, 0, 458759, 0, 0, 458761, 0, 0, 458762, 0, 0, 458763, 0, 0, 458764, 0, 0, 458765, 0, 0, 458766, 0, 0, 458767, 0, 0, 524288, 0, 0, 524292, 0, 0, 524297, 0, 0, 524298, 0, 0, 524299, 0, 0, 524300, 0, 0, 524301, 0, 0, 524302, 0, 0, 524303, 0, 0, 589824, 0, 0, 589825, 0, 0, 589826, 0, 0, 589827, 0, 0, 589828, 0, 0, 589829, 0, 0, 589830, 0, 0, 589831, 0, 0, 589832, 0, 0, 589833, 0, 0, 589834, 0, 0, 589835, 0, 0, 589836, 0, 0, 589837, 0, 0, 589838, 0, 0, 589839, 0, 0 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Hole" type="Area2D" parent="."]
+visible = false
+position = Vector2( 864, 289 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Hole"]
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hole"]
+shape = SubResource( 5 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Ball" type="KinematicBody2D" parent="."]
+visible = false
+position = Vector2( 160, 352 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Ball"]
+texture = ExtResource( 4 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ball"]
+shape = SubResource( 4 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="VectorPop" type="Popup" parent="."]
+margin_left = 126.0
+margin_top = 118.0
+margin_right = 904.0
+margin_bottom = 530.0
+popup_exclusive = true
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VectorPop"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="VectorPop/VBoxContainer"]
+margin_right = 778.0
+margin_bottom = 412.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="VectorPop"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -341.0
+margin_top = -155.0
+margin_right = 342.0
+margin_bottom = 119.0
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="VectorPop/VBoxContainer2"]
+margin_right = 683.0
+margin_bottom = 108.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 6 )
+text = "What is the next position?"
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VectorPop/VBoxContainer2"]
+margin_top = 112.0
+margin_right = 683.0
+margin_bottom = 232.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Control" type="Control" parent="VectorPop/VBoxContainer2/HBoxContainer"]
+margin_right = 32.0
+margin_bottom = 120.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Label2" type="Label" parent="VectorPop/VBoxContainer2/HBoxContainer"]
+margin_left = 36.0
+margin_top = 41.0
+margin_right = 169.0
+margin_bottom = 79.0
+size_flags_horizontal = 0
+custom_fonts/font = SubResource( 6 )
+text = "Vector2"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="LineEditx" type="LineEdit" parent="VectorPop/VBoxContainer2/HBoxContainer"]
+margin_left = 173.0
+margin_top = 41.0
+margin_right = 405.0
+margin_bottom = 79.0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 7 )
+custom_styles/normal = SubResource( 10 )
+align = 1
+expand_to_text_length = true
+placeholder_text = "x"
+placeholder_alpha = 0.32
+caret_blink = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Label3" type="Label" parent="VectorPop/VBoxContainer2/HBoxContainer"]
+margin_left = 409.0
+margin_right = 410.0
+margin_bottom = 120.0
+size_flags_vertical = 3
+custom_fonts/font = SubResource( 6 )
+text = ", "
+align = 1
+valign = 1
+autowrap = true
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="LineEdity" type="LineEdit" parent="VectorPop/VBoxContainer2/HBoxContainer"]
+margin_left = 414.0
+margin_top = 41.0
+margin_right = 646.0
+margin_bottom = 79.0
+size_flags_horizontal = 0
+size_flags_vertical = 4
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 7 )
+custom_styles/normal = SubResource( 11 )
+align = 1
+max_length = 4
+placeholder_text = "y"
+placeholder_alpha = 0.32
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Control2" type="Control" parent="VectorPop/VBoxContainer2/HBoxContainer"]
+margin_left = 650.0
+margin_right = 683.0
+margin_bottom = 120.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Button" type="Button" parent="VectorPop/VBoxContainer2"]
+margin_top = 236.0
+margin_right = 683.0
+margin_bottom = 274.0
+custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 8 )
+custom_styles/hover = SubResource( 12 )
+custom_styles/normal = SubResource( 9 )
+text = "Submit (Enter)"
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true
+}
+
+[node name="Button" type="Button" parent="."]
+visible = false
+margin_left = 604.0
+margin_top = 465.0
+margin_right = 999.0
+margin_bottom = 558.0
+custom_colors/font_color_disabled = Color( 1, 1, 1, 1 )
+custom_colors/font_color_focus = Color( 1, 1, 1, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 13 )
+custom_styles/hover = SubResource( 14 )
+custom_styles/pressed = SubResource( 16 )
+custom_styles/normal = SubResource( 15 )
+shortcut = SubResource( 21 )
+text = "Next Position (Tab)"
+__meta__ = {
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Finish" type="Label" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1024.0
+margin_bottom = 600.0
+custom_fonts/font = SubResource( 17 )
+custom_styles/normal = SubResource( 18 )
+text = "Push play."
+align = 1
+valign = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="Ouch" type="Label" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_right = 1024.0
+margin_bottom = 600.0
+custom_fonts/font = SubResource( 17 )
+custom_styles/normal = SubResource( 19 )
+text = "OUCH!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_group_": true,
+"_edit_lock_": true,
+"_edit_use_anchors_": false
+}
+
+[connection signal="body_entered" from="Hole" to="." method="_on_Hole_body_entered"]
+[connection signal="ball_hit" from="Ball" to="." method="_on_Ball_ball_hit"]
+[connection signal="new_pos" from="VectorPop" to="." method="_on_VectorPop_new_pos"]
+[connection signal="new_pos" from="VectorPop" to="Ball" method="set_next_pos"]
+[connection signal="pressed" from="VectorPop/VBoxContainer2/Button" to="VectorPop" method="_on_Button_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
